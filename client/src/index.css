@@ -1,0 +1,185 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Poppins', sans-serif; */
+    box-sizing: border-box;
+   
+}
+/* font-family: 'Open Sans',
+sans-serif;
+font-family: 'Roboto',
+sans-serif; */
+
+/* **************************** NAVBAR ******************************** */
+
+.navbar{
+    font-size: 17px;
+    line-height: 26px;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px gray;
+    --webkit-box-shadow:0 7px 6px -6px gray;
+    border-bottom: solid gray !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.nav-link{
+    font-weight: 300 !important;
+}
+
+.active{
+    border-bottom: 1px solid black;
+}
+.navbar-brand{
+    font-size: 700;
+    letter-spacing: 1px;
+}
+
+/* *********************************** FOOOTER ********************* */
+
+.footer{
+    color:white;
+    padding: 25px;
+    background:linear-gradient(to right, rgb(83, 82, 82), black);
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+.footer a:hover{
+    color: #ffefba;
+    border-bottom: 1px solid #ffefba;
+}
+
+/* **************************  PAGE NOT FOUND ********************************** */
+.pnf{
+    display: flex;
+    min-height: 65vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.pnf-title{
+    font-size: 100px;
+    font-weight: 700;
+}
+.pnf-heading{
+    font-weight: normal;
+}
+
+.pnf-btn{
+    color: black;
+    border: 1px solid black;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* ********************** CONTACT ********************** */
+
+.contacts{
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+/* ********************** ABOUT ********************* */
+
+.about{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* ****************** REGISTER ********************** */
+
+.register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.register form .form-group input{
+    border: 1px solid rgb(165, 160, 160);
+}
+
+
+/* ************************* FORGOT PASSWORD ********************* */
+
+.forgot-password form .form-group input{
+    border: 1px solid gray;
+}
+.forgot-password{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* ******************* ADMIN MENU **************************** */
+
+.admin-menu a, .user-menu a{
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+    font-size: 18px;
+        font-weight: 600;
+}
+.admin-menu a:hover{
+    background-color: rgb(214, 213, 213);
+}
+.user-menu a:hover{
+        background-color: rgb(214, 213, 213);
+}
+.admin-dashboard{
+font-size: 18px;
+   font-weight: 600;
+}
+
+/* *******************PRODUCT FORM */
+
+.product-form .form-group input{
+    font-size: 14px;
+}
+
+/* ***************   PRODUCT CARD *****************/
+
+.product-link{
+    text-decoration: none;
+    color: black;
+}
+.product-link:hover{
+    text-decoration: none;
+    color: black;
+}
+
+/* Card  */
+.card{
+    border-radius: '12px';
+        overflow: hidden;
+}
+.card .image-container{
+    overflow: hidden;
+}
+.card img{
+    cursor: pointer;
+}
+.card img:hover{
+
+    transform: scale(1.4);
+    transition: 0.5s ease-in-out;
+}
+
+/* ************************* CATEGORY BUTTON *************** */
+.category-btn{
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+}.category-btn:hover{
+    background-color: white;
+    color: black;
+    transition: 0.5s ease-in-out;
+    font-size: 18px;
+    font-weight: 600;
+}
