@@ -91,7 +91,7 @@ const CartPage = () => {
             key: "rzp_test_XMXO3SrPxms6c8", // Replace with your Razorpay key
             amount: order.amount,
             currency: 'INR',
-            name: 'MY Technology',
+            name: 'JALAS | Fusion',
             description: 'Payment for your product',
             order_id: order.id,
             handler: async function (response) {
@@ -101,9 +101,9 @@ const CartPage = () => {
                 let result = (response.razorpay_payment_id && response.razorpay_signature) ? "SUCCESS" : "FAILED";
                 const { data } = await axios.post(`${process.env.REACT_APP_API}/api/v1/product/create-order`, {cart, result})
                 if(data?.ok){
-                   toast.success("Payment succfully")
+                   toast.success("Payment successfully")
                 }else{
-                    toast.error("payment failed")
+                    toast.error("Payment Failed")
                 }
                 setCart([])
                 localStorage.removeItem("cart")
@@ -133,7 +133,7 @@ const CartPage = () => {
                
                 <div className="row  p-3">
                     <div className="col-md-6">
-                        <h3 className='text-center'>{cart?.length > 0 ? `You have ${cart?.length} cart items` : "cart is Empty"}</h3>
+                        <h3 className='text-center'>{cart?.length > 0 ? `You have ${cart?.length} cart items` : "Empty Cart"}</h3>
 
                         {
                             cart?.map(p => (
@@ -156,7 +156,7 @@ const CartPage = () => {
 
                     </div>
                     <div className="col-md-6 mt-3">
-                        <h3 className='text-center'>Cart Summery</h3>
+                        <h3 className='text-center'>Cart Summary</h3>
                         <h6 className='text-center'>TOTAL | CHECKOUT | PAYMENT</h6>
                         <h4 className='text-center mt-3'>Total : {getTotal()}</h4>
                         {

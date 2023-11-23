@@ -28,8 +28,8 @@ const Header = () => {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-light text-white p-3">
-                <Link className="navbar-brand">🛒ECommerce app</Link>
+            <nav className="navbar navbar-expand-lg navbar-light text-white p-3" style={{ backgroundColor: 'gray' }}>
+                <Link className="navbar-brand">JALAS - Fusion</Link>
 
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon" />
@@ -78,7 +78,7 @@ const Header = () => {
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 {
-                                    auth?.user?.name || "USER"
+                                    auth?.user?.name || "Login/Register"
                                 }
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

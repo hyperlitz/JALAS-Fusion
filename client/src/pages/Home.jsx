@@ -172,8 +172,13 @@ const Home = () => {
           </div>
           <div className="col-md-9">
             <div className="row">
-              <img src="https://img.freepik.com/free-psd/flat-design-sales-discount-youtube-banner_23-2150751206.jpg" alt="" width={"100%"} style={{borderRadius:'10px'}} />
-            </div>
+            <img
+                src={process.env.PUBLIC_URL + '/images/banner.gif'}
+                alt=""
+                width="100%"
+                style={{ borderRadius: '10px' }}
+              />
+                </div>
             <h2 className='mt-2'>Products</h2>
             <div className='d-flex flex-wrap mt-3'>
               {!products.length && <h3>No Product Found</h3>}

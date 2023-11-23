@@ -108,7 +108,7 @@ const ProductForm = ({ optionArray }) => {
                         className="form-control"
                         value={price}
                         name='price'
-                        placeholder="Price in RS" />
+                        placeholder="Price" />
                 </div>
                 <div className="form-group">
                     <input

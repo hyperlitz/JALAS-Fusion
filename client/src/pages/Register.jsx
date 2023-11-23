@@ -1,50 +1,65 @@
-import React, { useState } from 'react'
-import Layout from '../components/Layout/Layout'
-import {toast} from 'react-toastify'
-import axios from 'axios'
-import {  useNavigate } from 'react-router-dom'
-import Spinner from '../components/Spinner'
+import React, { useState } from 'react';
+import Layout from '../components/Layout/Layout';
+import axios from 'axios';
+import Swal from 'sweetalert2'; // Import SweetAlert
 
 const Register = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [registerData, setRegisterData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    phone: '',
+    address: '',
+    answer: '',
+  });
 
-    const navigate = useNavigate();
-    const [isLoading, setIsLoading] = useState(false)
-    const [registerData, setRegisterData] = useState({
-        name: "",
-        email: "",
-        password: "",
-        phone: "",
-        address: "",
-        answer: ""
-    })
+  const onHandleChange = (e) => {
+    const { name, value } = e.target;
+    setRegisterData({
+      ...registerData,
+      [name]: value,
+    });
+  };
 
-    const onHandleChange = (e) => {
-        const {name, value} = e.target;
-        setRegisterData({
-            ...registerData,
-            [name] : value
-        })
+  const onHandleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const { data } = await axios.post(`${process.env.REACT_APP_API}/api/v1/auth/register`, { ...registerData });
+      const { success, message } = data;
+
+      if (!success) {
+        // Use SweetAlert for displaying errors
+        Swal.fire({
+          icon: 'error',
+          title: 'Registration Error',
+          text: message,
+        });
+      } else {
+        // Use SweetAlert for displaying success messages
+        Swal.fire({
+          icon: 'success',
+          title: 'Registration Successful',
+          text: message,
+        }).then(() => {
+          // Redirect after successful registration
+          window.location.href = '/login';
+        });
+      }
+    } catch (err) {
+      console.error(err);
+      // Use SweetAlert for displaying generic error messages
+      Swal.fire({
+        icon: 'error',
+        title: 'Registration Error',
+        text: 'An error occurred while registering. Please try again.',
+      });
+    } finally {
+      setIsLoading(false);
     }
-
-    const  onHandleSubmit = async (e) => {
-        setIsLoading(true)
-        e.preventDefault()
-        try{
-            const { data } = await axios.post(`${process.env.REACT_APP_API}/api/v1/auth/register`, { ...registerData });
-            const {success, message, user} = data;
-            if(!success){
-                toast.error(message);
-                navigate("/register")
-            }else{
-                toast.success(message);
-                navigate("/login")
-            }
- 
-        }catch(err){
-            console.log(err.message)
-            toast.error(err)
-        }
-    }
+  };
 
     return (
         <Layout title={"Register The user"}>
