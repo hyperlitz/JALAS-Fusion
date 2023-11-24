@@ -1,5 +1,5 @@
 {
-  "name": "ecommerceproject",
+  "name": "JALAS-Fusion",
   "version": "1.0.0",
   "description": "e commerce rest api",
   "main": "server.js",
@@ -11,7 +11,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
-  "author": "ajmal m",
+  "author": "JALAS",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
