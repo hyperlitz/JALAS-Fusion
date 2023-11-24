@@ -5,10 +5,10 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
+    "install": "npm install && (cd client && npm install)",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "node server.js",
-    "dev": "npm install --prefix ./client && concurrently \"npm run server\" \"npm run client\"",
-    "postinstall": "npm install && npm install --prefix ./client"
+    "client": "npm start --prefix ./client"
   },
   "keywords": [],
   "author": "JALAS",
