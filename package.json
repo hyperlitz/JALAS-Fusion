@@ -4,12 +4,12 @@
   "description": "e commerce rest api",
   "main": "server.js",
   "type": "module",
-    "scripts": {
-      "install": "cd client && npm install && cd .. && npm install",
-      "start": "node server.js",
-      "heroku-postbuild": "npm run install && npm run build",
-      "dev": "concurrently \"npm run server\" \"npm run client\""
-    },
+  "scripts": {
+    "start": "node server.js",
+    "server": "node server.js",
+    "client": "npm start --prefix ./client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
   "keywords": [],
   "author": "JALAS",
   "license": "ISC",
