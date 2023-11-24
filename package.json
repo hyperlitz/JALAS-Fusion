@@ -1,12 +1,12 @@
 {
   "name": "JALAS-Fusion",
   "version": "1.0.0",
-  "description": "e commerce rest api",
+  "description": "e-commerce rest API",
   "main": "server.js",
   "type": "module",
   "scripts": {
     "install-server": "npm install",
-    "install-client": "cd client && npm install",
+    "install-client": "(cd client && npm install)",
     "install": "npm run install-server && npm run install-client",
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "node server.js",
