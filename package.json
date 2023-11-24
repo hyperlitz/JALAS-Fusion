@@ -5,6 +5,7 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
+    "install": "cd client && npm install && cd .. && npm install",
     "start": "node server.js",
     "server": "node server.js",
     "client": "npm start --prefix ./client",
