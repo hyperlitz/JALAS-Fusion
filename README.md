@@ -18,7 +18,7 @@ You can see the project in action at [Live Demo](your_live_demo_screenshot_link)
 ## Screenshots
 
 ### Screenshot 1: landing Page
-![Screenshot 1](./images/Screenshot1.png)
+![Screenshot 1](./images/Screnshot1.png)
 
 Insert any additional text or context here.
 
