@@ -23,7 +23,7 @@ app.use(morgan('dev'));
 
 // CORS configuration
 const corsOptions = {
-  origin: 'https://jalas-fusion-6b3afa890e65.herokuapp.com',
+  origin: 'https://jalas-fusion-ecommerce-9577e50a35c4.herokuapp.com',
   credentials: false, // Do not require credentials
 };
 
