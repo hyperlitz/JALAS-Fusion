@@ -5,9 +5,9 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
+    "server": "node server.js",
     "install-all": "npm install && cd client && npm install",
     "start": "npm run install-all && concurrently \"npm run server\" \"npm run client\"",
-    "server": "node server.js",
     "client": "npm start --prefix ./client"
   },
   "keywords": [],
