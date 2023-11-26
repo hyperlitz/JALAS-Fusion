@@ -17,7 +17,7 @@
   "author": "JALAS",
   "license": "ISC",
   "dependencies": {
-    "bcrpyt": "^2.0.0",
+    "bcrpyt": "^5.0.1",
     "braintree": "^3.17.0",
     "colors": "^1.4.0",
     "concurrently": "^8.2.1",
