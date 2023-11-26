@@ -13,7 +13,7 @@ Welcome to the E-Commerce Website project! This full-stack web application was b
 
 ## Demo
 
-You can see the project in action at [Live Demo](your_live_demo_screenshot_link).
+You can see the project in action at [Live Demo](https://jalas-fusion-ecommerce-9577e50a35c4.herokuapp.com/).
 
 ## Screenshots
 
@@ -46,6 +46,22 @@ Insert any additional text or context here.
 - **Authentication:** JSON Web Tokens (JWT)
 - **UI Framework:** Bootstrap or Material-UI for styling
 - **Deployment:** Hosted on [Platform]() (Specify your deployment platform)
+
+## Developers
+- Lito Banano
+- https://github.com/hyperlitz
+
+- Andretta Jackson
+- https://github.com/andrettaj
+
+- Jose Ruiz
+- https://github.com/venomgto
+
+- Stephanie Contreras
+- https://github.com/SmorenoContreras
+
+- Danielyan Ararat
+- https://github.com/araratdanielyan
 
 ## Getting Started
 
