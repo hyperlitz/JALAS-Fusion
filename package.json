@@ -4,6 +4,9 @@
   "description": "e-commerce rest API",
   "main": "server.js",
   "type": "module",
+  "engines": {
+    "node": "20.8.0"
+  },
   "scripts": {
     "server": "node server.js",
     "install-all": "npm install && cd client && npm install",
@@ -14,7 +17,7 @@
   "author": "JALAS",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^5.1.1",
+    "bcrpyt": "^2.0.0",
     "braintree": "^3.17.0",
     "colors": "^1.4.0",
     "concurrently": "^8.2.1",
