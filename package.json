@@ -9,8 +9,8 @@
   },
   "scripts": {
     "install-all": "npm install && cd client && npm install",
-    "server": "node server.js",
     "start": "npm run install-all && concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server.js",
     "client": "npm start --prefix ./client"
   },
   "keywords": [],
